@@ -5,7 +5,11 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'mukta': ['Mukta', 'sans-serif'],
+      },
+    },
   },
   variants: {},
   plugins: [],

@@ -18,5 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('{postSlug}', PostController::class)->name('post');
+Route::get('/article/{postSlug}', [PostController::class, 'show'])->name('post');
 

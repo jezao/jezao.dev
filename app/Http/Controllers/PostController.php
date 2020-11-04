@@ -6,8 +6,11 @@ use App\Models\Post;
 
 class PostController
 {
-    public function __invoke(Post $post)
+    public function show($slug)
     {
-        return view('blog.post', compact($post));
+        $post = Post::where('slug',$slug)->first();
+
+        return view('blog.post', compact('post'));
+
     }
 }
